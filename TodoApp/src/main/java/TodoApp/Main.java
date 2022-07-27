@@ -5,6 +5,9 @@
  */
 package TodoApp;
 
+import java.sql.Connection;
+import util.ConnetcionFactory;
+
 /**
  *
  * @author robson
@@ -16,6 +19,10 @@ public class Main {
      */
     public static void main(String[] args) {
         // TODO code application logic here
+        
+        Connection c = ConnetcionFactory.getConnection();// abre conexao
+        
+        ConnetcionFactory.closeConnection(c); // fecha conexao caso nao precisar        
     }
     
 }
